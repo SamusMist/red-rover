@@ -14,7 +14,7 @@ const App = () => {
 
  return (
    <div className='App'>
-   <Rovers fetchRoverData={fetchRoverData} />
+   <Rovers fetchRoverData={fetchRoverData} roverPhotoData={rover} />
    </div>
  )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RoverDisplay from '../RoverDisplay/RoverDisplay'
 
-const Rovers = ({ fetchRoverData }) => {
+const Rovers = ({ fetchRoverData, roverPhotoData }) => {
   const [selectedRover, setSelectedRover] = useState(null)
   const [date, setDate] = useState(null)
   const [checkedRadio, setCheckedRadio] = useState({
@@ -13,6 +13,15 @@ const Rovers = ({ fetchRoverData }) => {
 
   const changeRadio = (e) => {
     setCheckedRadio(() => {
+      if(checkedRadio.perseverance) {
+        setSelectedRover('perseverance')
+      } else if(checkedRadio.spirit) {
+        setSelectedRover('spirit')
+      } else if(checkedRadio.curiosity) {
+        setSelectedRover('curiosity')
+      } else if(checkedRadio.opportunity) {
+        setSelectedRover('opportunity')
+      }
       return {
         perseverance: false,
         spirit: false,
@@ -21,20 +30,13 @@ const Rovers = ({ fetchRoverData }) => {
         [e.target.value]: true
       }
     })
-    if(checkedRadio.perseverance) {
-      setSelectedRover('perseverance')
-    } else if(checkedRadio.spirit) {
-      setSelectedRover('spirit')
-    } else if(checkedRadio.curiosity) {
-      setSelectedRover('curiosity')
-    } else if(checkedRadio.opportunity) {
-      setSelectedRover('opportunity')
-    }
   }
 
   return (
     <div className='rovers'>
-    <form className='rover-selector' onSubmit={(e) => {
+    <form
+      className='rover-selector'
+      onSubmit={(e) => {
       e.preventDefault()
       fetchRoverData(selectedRover, date)}}>
       <input
@@ -78,9 +80,10 @@ const Rovers = ({ fetchRoverData }) => {
         type='date'
         onChange={(e) => setDate(e.target.value)}
       />
-      <button type='submit'>Submit</button>
+      <button
+        type='submit'>Submit</button>
     </form>
-    <RoverDisplay fetchRoverData={fetchRoverData} />
+    <RoverDisplay roverPhotoData={roverPhotoData} />
     </div>
   )
 }

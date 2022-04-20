@@ -1,8 +1,10 @@
 import React from 'react';
+import RoverCard from '../RoverCard/RoverCard';
+import './RoverDisplay.css'
 
-const RoverDisplay = ({ fetchRoverData }) => {
+const RoverDisplay = ({ roverPhotoData }) => {
 
-  const allRoverData = fetchRoverData.map(data => {
+  const allRoverData = roverPhotoData.map(data => {
     return (
       <div className='data-display' key={data.id}>
         <RoverCard {...data} />
@@ -10,12 +12,11 @@ const RoverDisplay = ({ fetchRoverData }) => {
     )
   })
 
-  return(
+  return (
     <div className='data-container'>
       {allRoverData}
     </div>
   )
-
 }
 
-export default RoverDisplay
+export default RoverDisplay;
