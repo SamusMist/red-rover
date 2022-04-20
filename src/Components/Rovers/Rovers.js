@@ -13,15 +13,6 @@ const Rovers = ({ fetchRoverData, roverPhotoData }) => {
 
   const changeRadio = (e) => {
     setCheckedRadio(() => {
-      if(checkedRadio.perseverance) {
-        setSelectedRover('perseverance')
-      } else if(checkedRadio.spirit) {
-        setSelectedRover('spirit')
-      } else if(checkedRadio.curiosity) {
-        setSelectedRover('curiosity')
-      } else if(checkedRadio.opportunity) {
-        setSelectedRover('opportunity')
-      }
       return {
         perseverance: false,
         spirit: false,
@@ -30,6 +21,7 @@ const Rovers = ({ fetchRoverData, roverPhotoData }) => {
         [e.target.value]: true
       }
     })
+    setSelectedRover(e.target.value)
   }
 
   return (
