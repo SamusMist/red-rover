@@ -1,11 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
+import RoverDisplay from '../RoverDisplay/RoverDisplay'
 
 const Rovers = ({ fetchRoverData }) => {
+  const [selectedRover, setSelectedRover] = useState(null)
+  const [date, setDate] = useState(null)
+  const [checkedRadio, setCheckedRadio] = useState({
+    perseverance: false,
+    spirit: false,
+    curiosity: false,
+    opportunity: false
+  });
+
+  const changeRadio = (e) => {
+    setCheckedRadio(() => {
+      return {
+        perseverance: false,
+        spirit: false,
+        curiosity: false,
+        opportunity: false,
+        [e.target.value]: true
+      }
+    })
+    if(checkedRadio.perseverance) {
+      setSelectedRover('perseverance')
+    } else if(checkedRadio.spirit) {
+      setSelectedRover('spirit')
+    } else if(checkedRadio.curiosity) {
+      setSelectedRover('curiosity')
+    } else if(checkedRadio.opportunity) {
+      setSelectedRover('opportunity')
+    }
+  }
+
   return (
-    <div className='button-container'>
-          <button className='curiosity'
-          value={'curiosity'}
-          onClick={() => fetchRoverData('curiosity', '2022-3-22')}>curiosity</button>
+    <div className='rovers'>
+    <form className='rover-selector' onSubmit={(e) => {
+      e.preventDefault()
+      fetchRoverData(selectedRover, date)}}>
+      <input
+        id='curiosity'
+        type='radio'
+        className='curiosity'
+        value={'curiosity'}
+        checked={ checkedRadio.curiosity }
+        onChange={ changeRadio }
+      />
+      <label htmlFor='curiosity'>Curiosity</label>
+      <input
+        id='perseverance'
+        type='radio'
+        className='perseverance'
+        value={'perseverance'}
+        checked={ checkedRadio.perseverance }
+        onChange={ changeRadio }
+      />
+      <label htmlFor='perseverance'>Perseverance</label>
+      <input
+        id='opportunity'
+        type='radio'
+        className='opportunity'
+        value={'opportunity'}
+        checked={ checkedRadio.opportunity }
+        onChange={ changeRadio }
+      />
+      <label htmlFor='opportunity'>Opportunity</label>
+      <input
+        id='spirit'
+        type='radio'
+        className='spirit'
+        value={'spirit'}
+        checked={ checkedRadio.spirit }
+        onChange={ changeRadio }
+      />
+      <label htmlFor='spirit'>Spirit</label>
+      <input
+        name='select-date'
+        type='date'
+        onChange={(e) => setDate(e.target.value)}
+      />
+      <button type='submit'>Submit</button>
+    </form>
+    <RoverDisplay fetchRoverData={fetchRoverData} />
     </div>
   )
 }
