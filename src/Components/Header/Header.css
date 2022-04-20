@@ -1,0 +1,29 @@
+@import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
+
+.header {
+  background-image: url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMDktYWRqLTEyXzEuanBn.jpg?s=F-bib3KifzcgA70b7LOvJuqajTVu55YA-Eu8xAbnfoM);
+  color: red;
+  font-family: "Nasalization";
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+h1{
+  margin-top:2%;
+  margin-bottom:2%;
+  margin-left: 2%
+}
+
+.home {
+  margin-right: 0px;
+  background: none;
+  font-family: "Nasalization";
+  color: red;
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  border: none;
+  cursor: pointer;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Rovers from '../Rovers/Rovers';
 import fetchData from '../../apiCalls';
+import Header from '../Header/Header'
 
 const App = () => {
  const [rover, setRover] = useState([])
@@ -14,6 +15,7 @@ const App = () => {
 
  return (
    <div className='App'>
+   <Header />
    <Rovers fetchRoverData={fetchRoverData} roverPhotoData={rover} />
    </div>
  )
