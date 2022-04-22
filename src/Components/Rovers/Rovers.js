@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import RoverDisplay from '../RoverDisplay/RoverDisplay'
+import { Route, Link } from 'react-router-dom';
 
-const Rovers = ({ fetchRoverData, roverPhotoData }) => {
+const Rovers = ({ fetchRoverData }) => {
   const [selectedRover, setSelectedRover] = useState(null)
   const [date, setDate] = useState(null)
   const [checkedRadio, setCheckedRadio] = useState({
@@ -24,13 +25,20 @@ const Rovers = ({ fetchRoverData, roverPhotoData }) => {
     setSelectedRover(e.target.value)
   }
 
+  const displayRoverImages = (e) => {
+    e.preventDefault()
+    fetchRoverData(selectedRover, date)
+    clearForm()
+  }
+
+  const clearForm = () => {
+    setDate(null)
+  }
+
   return (
     <div className='rovers'>
     <form
-      className='rover-selector'
-      onSubmit={(e) => {
-      e.preventDefault()
-      fetchRoverData(selectedRover, date)}}>
+      className='rover-selector'>
       <input
         id='curiosity'
         type='radio'
@@ -68,14 +76,12 @@ const Rovers = ({ fetchRoverData, roverPhotoData }) => {
       />
       <label htmlFor='spirit'>Spirit</label>
       <input
-        name='select-date'
+        className='select-date'
         type='date'
         onChange={(e) => setDate(e.target.value)}
       />
-      <button
-        type='submit'>Submit</button>
+        <button onClick={(e) => {displayRoverImages(e)}}>Submit</button>
     </form>
-    <RoverDisplay roverPhotoData={roverPhotoData} />
     </div>
   )
 }
