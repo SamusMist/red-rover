@@ -14,13 +14,13 @@ const App = () => {
    fetchData.getData(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${earthDate}&api_key=ZwJF4eMjMCusSw5v7ISSzrh4nPPv91b4uoCx6rgq`)
      .then(data => setRover(data.photos))
  }
- 
+
  const resetRover = () => {
    setRover([])
  }
 
  return (
-   <>
+   <div className='app'>
    { rover.length > 0 ? <Redirect to='/images' /> : '' }
    <Switch>
     <Route exact path='/' >
@@ -32,7 +32,7 @@ const App = () => {
       <RoverDisplay roverPhotoData={rover} />
     </Route>
    </Switch>
-   </>
+   </div>
  )
 }
 
