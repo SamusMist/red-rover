@@ -2,22 +2,37 @@ import React, { useState } from 'react';
 import './App.css';
 import Rovers from '../Rovers/Rovers';
 import fetchData from '../../apiCalls';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import RoverDisplay from '../RoverDisplay/RoverDisplay';
 
 const App = () => {
  const [rover, setRover] = useState([])
 
  const fetchRoverData = (roverName, earthDate) => {
+   console.log(roverName)
    fetchData.getData(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${earthDate}&api_key=ZwJF4eMjMCusSw5v7ISSzrh4nPPv91b4uoCx6rgq`)
      .then(data => setRover(data.photos))
-     console.log(rover)
+ }
+ 
+ const resetRover = () => {
+   setRover([])
  }
 
  return (
-   <div className='App'>
-   <Header />
-   <Rovers fetchRoverData={fetchRoverData} roverPhotoData={rover} />
-   </div>
+   <>
+   { rover.length > 0 ? <Redirect to='/images' /> : '' }
+   <Switch>
+    <Route exact path='/' >
+      <Header resetRover={resetRover} />
+      <Rovers fetchRoverData={fetchRoverData} />
+    </Route>
+    <Route exact path='/images'>
+      <Header resetRover={resetRover} />
+      <RoverDisplay roverPhotoData={rover} />
+    </Route>
+   </Switch>
+   </>
  )
 }
 
