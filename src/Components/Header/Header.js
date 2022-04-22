@@ -1,12 +1,15 @@
 import React from 'react';
 import './Header.css'
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ resetRover }) => {
 
   return (
     <div className='header'>
       <h1>Red Rover</h1>
-      <button className='home'>Home</button>
+      <Link to='/'>
+        <button className='home' onClick={() => {resetRover()}}>Home</button>
+      </Link>
     </div>
   )
 }
