@@ -19,6 +19,11 @@ const App = () => {
    setRover([])
  }
 
+ const deleteImage = (id) => {
+   const filteredImages = rover.filter(image => image.id !== id);
+   setRover(filteredImages)
+ }
+
  return (
    <div className='app'>
    { rover.length > 0 ? <Redirect to='/images' /> : '' }
@@ -29,7 +34,7 @@ const App = () => {
     </Route>
     <Route exact path='/images'>
       <Header resetRover={resetRover} />
-      <RoverDisplay roverPhotoData={rover} />
+      <RoverDisplay deleteImage={deleteImage} roverPhotoData={rover} />
     </Route>
    </Switch>
    </div>
