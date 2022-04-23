@@ -1,14 +1,15 @@
 import React from 'react';
 import './RoverCard.css'
 
-const RoverCard = ({ camera, img_src, rover }) => {
+const RoverCard = ({ camera, img_src, rover, id, deleteImage }) => {
 
   return (
-    <div className='card'>
-      <img src={img_src} height='250px' width='250px'/>
-      <p>{rover.name}</p>
-      <p>{rover.status}</p>
-      <p>{camera.full_name}</p>
+    <div className='card' onClick={() => {deleteImage(id)}}>
+      <img className ='rover-card' src={img_src} height='240px' width='240px'/>
+      <div className='hover-text'>
+        <p className='camera'>{camera.full_name}</p>
+        <p className='remove-img'>click to remove</p>
+      </div>
     </div>
   )
 }
