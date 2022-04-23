@@ -1,0 +1,60 @@
+@import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rover-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.spirit, .opportunity, .perseverance, .curiosity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.date-submit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  align-items:center;
+  background: url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMDktYWRqLTEyXzEuanBn.jpg?s=F-bib3KifzcgA70b7LOvJuqajTVu55YA-Eu8xAbnfoM)
+}
+
+.select-date {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Nasalization'
+}
+
+p {
+  color: red;
+}
+
+button {
+  margin-top: 20px;
+  font-family: 'Nasalization';
+  height:50px;
+  width:75px;
+  font-size:20px;
+  background-color: white;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.lifecycle {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.lifecycle-date {
+  margin-top: 2px;
+  font-size: 20px;
+}

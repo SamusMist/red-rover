@@ -1,0 +1,29 @@
+.rover-card {
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  cursor:pointer;
+}
+
+.rover-card:hover + .hover-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hover-text {
+  font-size: 0.5em;
+  display: none;
+  position: absolute;
+  font-size: 10px;
+}
+
+.remove-img {
+  margin-top: 180px;
+  font-size: 15px;
+}
