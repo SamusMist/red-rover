@@ -3,12 +3,11 @@ import RoverDisplay from '../RoverDisplay/RoverDisplay';
 import { Route, Link } from 'react-router-dom';
 import './Rovers.css';
 import Error from '../Error/Error';
+import PropTypes from 'prop-types';
 
 const Rovers = ({ fetchRoverData, errorDisplay }) => {
   const [errorMsg, setErrorMsg] = useState('')
   const [errorState, setErrorState] = useState(false)
-  const [min, setMin] = useState('')
-  const [max, setMax] = useState('')
   const [selectedRover, setSelectedRover] = useState(null)
   const [date, setDate] = useState(null)
   const [checkedRadio, setCheckedRadio] = useState({
@@ -82,7 +81,7 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
           type='date'
           onChange={(e) => setDate(e.target.value)}
         />
-        <button onClick={(e) => {displayRoverImages(e)}}>Enter</button>
+        <button className='submit' onClick={(e) => {displayRoverImages(e)}}>Enter</button>
         </div>
     </form>
     </div>

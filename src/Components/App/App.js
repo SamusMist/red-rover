@@ -5,10 +5,12 @@ import fetchData from '../../apiCalls';
 import Header from '../Header/Header';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import RoverDisplay from '../RoverDisplay/RoverDisplay';
+import ErrorPage from '../Error/ErrorPage';
 
 const App = () => {
  const [rover, setRover] = useState([])
  const [error, setError] = useState('')
+ const [redirect, setRedirect] = useState(false)
 
  const fetchRoverData = (roverName, earthDate) => {
    console.log(roverName)
@@ -18,9 +20,15 @@ const App = () => {
        setError(error)
     })
  }
+
+ const applyRedirect = () => {
+   setRedirect(true)
+ }
+
  const resetErrorDisplay = () => {
    setError('')
  }
+ 
  const resetRover = () => {
    resetErrorDisplay()
    setRover([])
@@ -42,6 +50,10 @@ const App = () => {
     <Route exact path='/images'>
       <Header resetRover={resetRover} />
       <RoverDisplay deleteImage={deleteImage} roverPhotoData={rover} />
+    </Route>
+    <Route>
+      <Redirect to='/error' />
+      <ErrorPage />
     </Route>
    </Switch>
    </div>

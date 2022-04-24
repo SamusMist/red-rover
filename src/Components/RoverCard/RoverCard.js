@@ -1,7 +1,8 @@
 import React from 'react';
 import './RoverCard.css'
+import PropTypes from 'prop-types';
 
-const RoverCard = ({ camera, img_src, rover, id, deleteImage }) => {
+const RoverCard = ({ camera, img_src, id, rover, deleteImage }) => {
 
   return (
     <div className='card' onClick={() => {deleteImage(id)}}>
@@ -15,3 +16,10 @@ const RoverCard = ({ camera, img_src, rover, id, deleteImage }) => {
 }
 
 export default RoverCard;
+
+RoverCard.propTypes = {
+  camera: PropTypes.object.isRequired,
+  img_src: PropTypes.string.isRequired,
+  rover: PropTypes.object.isRequired,
+  deleteImage: PropTypes.func.isRequired
+}
