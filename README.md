@@ -52,7 +52,7 @@ To view the code:
 - webpage will open in separate browser
 
 ### Features
-- As a user:
+- As a user: 
 - you may select one of four Mars rovers
 - you may select a specific date
 - you may submit your inputs to view photos from the specified rover for that day
