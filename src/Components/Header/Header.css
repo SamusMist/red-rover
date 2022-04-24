@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 30px;
+  padding-right: 10px;
 }
 
 h1{
@@ -21,9 +22,7 @@ h1{
   font-family: "Nasalization";
   color: red;
   font-size: 25px;
-  margin-top: 50%;
-  margin-bottom: 2%;
-  margin-right: 2%;
+  margin-top: 46%;
   border: none;
   cursor: pointer;
 }

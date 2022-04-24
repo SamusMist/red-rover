@@ -12,7 +12,6 @@ const RoverDisplay = ({ roverPhotoData, deleteImage }) => {
     status = data.rover.status;
     sol = data.sol;
     return (
-
       <div className='data-display' key={data.id}>
         <RoverCard deleteImage={deleteImage} {...data} />
       </div>
