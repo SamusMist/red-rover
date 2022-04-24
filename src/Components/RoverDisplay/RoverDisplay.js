@@ -1,6 +1,7 @@
 import React from 'react';
 import RoverCard from '../RoverCard/RoverCard';
-import './RoverDisplay.css'
+import './RoverDisplay.css';
+import PropTypes from 'prop-types';
 
 const RoverDisplay = ({ roverPhotoData, deleteImage }) => {
   let roverName = ''
@@ -15,7 +16,6 @@ const RoverDisplay = ({ roverPhotoData, deleteImage }) => {
       <div className='data-display' key={data.id}>
         <RoverCard deleteImage={deleteImage} {...data} />
       </div>
-
     )
   })
 
