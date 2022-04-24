@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Header = ({ resetRover }) => {
 
@@ -15,3 +16,7 @@ const Header = ({ resetRover }) => {
 }
 
 export default Header
+
+Header.propTypes = {
+  resetRover: PropTypes.func
+}
