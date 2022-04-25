@@ -52,6 +52,7 @@ const App = () => {
     </Route>
     <Route>
       <Redirect to='/error' />
+      <Header resetRover={resetRover} />
       <ErrorPage />
     </Route>
    </Switch>

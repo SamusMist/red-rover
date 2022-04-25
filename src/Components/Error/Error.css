@@ -1,9 +1,14 @@
 .error-message {
+  position: absolute;
   color: white;
+  top: 75%;
+  left: 25%;
 }
-
 .error-display {
+  position: absolute;
   color: white;
+  top: 75%;
+  left: 30%;
 }
 
 .error-page {
