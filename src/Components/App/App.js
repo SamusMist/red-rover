@@ -13,7 +13,6 @@ const App = () => {
  const [redirect, setRedirect] = useState(false)
 
  const fetchRoverData = (roverName, earthDate) => {
-   console.log(roverName)
    fetchData.getData(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${earthDate}&api_key=ZwJF4eMjMCusSw5v7ISSzrh4nPPv91b4uoCx6rgq`)
      .then(data => setRover(data.photos))
      .catch((error) => {
@@ -28,7 +27,7 @@ const App = () => {
  const resetErrorDisplay = () => {
    setError('')
  }
- 
+
  const resetRover = () => {
    resetErrorDisplay()
    setRover([])

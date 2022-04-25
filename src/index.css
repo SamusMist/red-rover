@@ -7,8 +7,8 @@
     url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
     url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.svg#Nasalization") format("svg"); /* iOS 4.1- */
 }
+
 body {
   background-color: black;
   margin: 0;
-
 }
