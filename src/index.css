@@ -1,5 +1,12 @@
 @import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
-
+@font-face {font-family: "Nasalization";
+    src: url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.svg#Nasalization") format("svg"); /* iOS 4.1- */
+}
 body {
   background-color: black;
   margin: 0;
