@@ -1,11 +1,10 @@
-/* @import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization); */
+@import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
+@font-face {font-family: "Nasalization"; src: url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot"); src: url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff") format("woff"), url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.svg#Nasalization") format("svg"); }
 
 .app {
   background-color: black;
   color: white;
-  font-family: nasalization, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Nasalization";
 }
 
 [type=radio] {

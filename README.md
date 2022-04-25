@@ -52,7 +52,7 @@ To view the code:
 - webpage will open in separate browser
 
 ### Features
-- As a user: 
+- As a user:
 - you may select one of four Mars rovers
 - you may select a specific date
 - you may submit your inputs to view photos from the specified rover for that day
@@ -66,3 +66,4 @@ To view the code:
 
 ### Created by
 - [Sam Mistele](https://github.com/SamusMist)
+<div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
