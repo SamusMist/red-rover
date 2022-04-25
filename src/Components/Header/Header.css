@@ -3,7 +3,7 @@
 
 .header {
   background-image: url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMDktYWRqLTEyXzEuanBn.jpg?s=F-bib3KifzcgA70b7LOvJuqajTVu55YA-Eu8xAbnfoM);
-  color: red;
+  color: #ff0000;
   font-family: "Nasalization";
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ h1{
   margin-right: 0px;
   background: none;
   font-family: "Nasalization";
-  color: red;
+  color: #ff0000;
   font-size: 25px;
   margin-top: 46%;
   border: none;

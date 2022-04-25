@@ -38,7 +38,7 @@
 }
 
 p {
-  color: red;
+  color: #ff0000;
 }
 
 button {
@@ -47,7 +47,7 @@ button {
   height:50px;
   width:75px;
   font-size:20px;
-  background-color: white;
+  background-color: #000000;
   border-radius: 15%;
   cursor: pointer;
 }
