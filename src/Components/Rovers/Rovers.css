@@ -1,5 +1,3 @@
-@import url("https://db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization");
-@font-face {font-family: "Nasalization"; src: url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot"); src: url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.woff") format("woff"), url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.svg#Nasalization") format("svg"); }
 
 .form {
   display: flex;
@@ -23,7 +21,6 @@
 .date-submit {
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
   align-items:center;
   background: url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMDktYWRqLTEyXzEuanBn.jpg?s=F-bib3KifzcgA70b7LOvJuqajTVu55YA-Eu8xAbnfoM)
 }
@@ -32,7 +29,7 @@
   width: 200px;
   text-align: center;
   cursor: pointer;
-  font-family: 'Nasalization'
+  font-family: 'Nova Round', cursive;
 }
 
 p {
@@ -41,7 +38,7 @@ p {
 
 button {
   margin-top: 20px;
-  font-family: 'Nasalization';
+  font-family: 'Nova Round', cursive;
   height:50px;
   width:75px;
   font-size:20px;
@@ -58,4 +55,12 @@ button {
 .lifecycle-date {
   margin-top: 2px;
   font-size: 20px;
+}
+
+.error-container {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }

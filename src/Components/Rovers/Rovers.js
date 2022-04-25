@@ -73,7 +73,9 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
           <p className='lifecycle-date'>01-03-2004 . 01-27-2010</p>
         </label>
       </div>
-      {errorState !== '' ? <Error errorMsg={errorMsg} errorDisplay={errorDisplay} /> : ''  }
+      <div className='error-container'>
+        {errorState !== '' ? <Error errorMsg={errorMsg} errorDisplay={errorDisplay} /> : ''  }
+      </div>
       <div className='date-submit'>
         <p>Select a date within the rovers lifecycle</p>
         <input
