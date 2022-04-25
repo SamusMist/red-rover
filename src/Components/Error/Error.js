@@ -10,8 +10,3 @@ const Error = ({ errorDisplay, errorMsg }) => {
 }
 
 export default Error;
-
-Error.propTypes = {
-  errorDisplay: PropTypes.string,
-  errorMsg: PropTypes.string
-}
