@@ -3,13 +3,13 @@ import RoverDisplay from '../RoverDisplay/RoverDisplay';
 import { Route, Link } from 'react-router-dom';
 import './Rovers.css';
 import Error from '../Error/Error';
-import PropTypes from 'prop-types';
+import { RoverProps as RoverProps } from '../../utilities/utilities';
 
-const Rovers = ({ fetchRoverData, errorDisplay }) => {
-  const [errorMsg, setErrorMsg] = useState('')
-  const [errorState, setErrorState] = useState(false)
-  const [selectedRover, setSelectedRover] = useState(null)
-  const [date, setDate] = useState(null)
+const Rovers = ({ fetchRoverData, errorDisplay }: RoverProps) => {
+  const [errorMsg, setErrorMsg] = useState<string>('');
+  const [errorState, setErrorState] = useState<boolean>(false);
+  const [selectedRover, setSelectedRover] = useState<string>('');
+  const [date, setDate] = useState<string>('');
   const [checkedRadio, setCheckedRadio] = useState({
     perseverance: false,
     spirit: false,
@@ -17,7 +17,7 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
     opportunity: false
   });
 
-  const changeRadio = (e) => {
+  const changeRadio = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCheckedRadio(() => {
       return {
         perseverance: false,
@@ -30,7 +30,7 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
     setSelectedRover(e.target.value)
   }
 
-  const displayRoverImages = (e) => {
+  const displayRoverImages = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
     fetchRoverData(selectedRover, date)
     if(fetchRoverData.length === 0)
@@ -45,7 +45,7 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
     <form className='form'>
       <div className='rover-selector'>
         <label htmlFor='curiosity' className='curiosity'>
-          <input type='radio' id='curiosity' type='radio' value={'curiosity'} checked={ checkedRadio.curiosity } onChange={ changeRadio }/>
+          <input id='curiosity' type='radio' value={'curiosity'} checked={ checkedRadio.curiosity } onChange={ changeRadio }/>
           <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg/260px-Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg' height='300px' width='300px'/>
           Curiosity
           <p className='lifecycle'>Lifecycle:</p>
@@ -74,7 +74,7 @@ const Rovers = ({ fetchRoverData, errorDisplay }) => {
         </label>
       </div>
       <div className='error-container'>
-        {errorState !== '' ? <Error errorMsg={errorMsg} errorDisplay={errorDisplay} /> : ''  }
+        {!errorState ? <Error errorMsg={errorMsg} errorDisplay={errorDisplay} /> : ''  }
       </div>
       <div className='date-submit'>
         <p>Select a date within the rovers lifecycle</p>
