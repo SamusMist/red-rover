@@ -14,11 +14,11 @@
   text-align: center;
 }
 
-h1 {
+.rover-name {
   font-size:50px;
   margin-bottom: 5px;
   margin-right: 20px;
-  color:white;
+  color: white;
 }
 
 .info {

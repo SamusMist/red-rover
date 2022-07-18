@@ -6,13 +6,15 @@ import Header from '../Header/Header';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import RoverDisplay from '../RoverDisplay/RoverDisplay';
 import ErrorPage from '../Error/ErrorPage';
+import { RoverFetch as RoverFetch } from '../../utilities/utilities';
+import { RoverDataType as RoverDataType } from '../../utilities/utilities';
 
 const App = () => {
- const [rover, setRover] = useState([])
- const [error, setError] = useState('')
- const [redirect, setRedirect] = useState(false)
+ const [rover, setRover] = useState<RoverDataType[]>([]);
+ const [error, setError] = useState<string>('');
+ const [redirect, setRedirect] = useState<boolean>(false);
 
- const fetchRoverData = (roverName, earthDate) => {
+ const fetchRoverData: RoverFetch = (roverName, earthDate) => {
    fetchData.getData(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${earthDate}&api_key=ZwJF4eMjMCusSw5v7ISSzrh4nPPv91b4uoCx6rgq`)
      .then(data => setRover(data.photos))
      .catch((error) => {
@@ -34,7 +36,7 @@ const App = () => {
    setRover([])
  }
 
- const deleteImage = (id) => {
+ const deleteImage = (id: number): void => {
    const filteredImages = rover.filter(image => image.id !== id);
    setRover(filteredImages)
  }
