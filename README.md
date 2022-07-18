@@ -14,6 +14,7 @@ Anyway, once you select a rover and a date you can hit that submit button and se
 - React Router
 - CSS
 - HTML
+- Typescript
 - Cypress
 - RESTful APIs
 - Figma
