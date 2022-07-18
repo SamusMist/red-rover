@@ -17,6 +17,7 @@ const App = () => {
      .then(data => setRover(data.photos))
      .catch((error) => {
        setError(error)
+       console.log(rover)
     })
  }
 
@@ -42,19 +43,23 @@ const App = () => {
    <div className='app'>
    { rover.length > 0 ? <Redirect to='/images' /> : '' }
    <Switch>
+
     <Route exact path='/' >
       <Header resetRover={resetRover} />
       <Rovers errorDisplay={error} roverPhotoData={rover} fetchRoverData={fetchRoverData} />
     </Route>
+
     <Route exact path='/images'>
       <Header resetRover={resetRover} />
       <RoverDisplay deleteImage={deleteImage} roverPhotoData={rover} />
     </Route>
+
     <Route>
       <Redirect to='/error' />
       <Header resetRover={resetRover} />
       <ErrorPage />
     </Route>
+    
    </Switch>
    </div>
  )
