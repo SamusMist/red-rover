@@ -1,12 +1,12 @@
 import React from 'react';
 import RoverCard from '../RoverCard/RoverCard';
 import './RoverDisplay.css';
-import PropTypes from 'prop-types';
+import { RoverDisplayProps as RoverDisplayProps} from '../../utilities/utilities';
 
-const RoverDisplay = ({ roverPhotoData, deleteImage }) => {
+const RoverDisplay = ({ roverPhotoData, deleteImage }: RoverDisplayProps) => {
   let roverName = ''
   let status = ''
-  let sol = ''
+  let sol: number = 0
 
   const allRoverData = roverPhotoData.map(data => {
     roverName = data.rover.name;
@@ -22,7 +22,7 @@ const RoverDisplay = ({ roverPhotoData, deleteImage }) => {
   return (
     <div className='image-display'>
       <div className='image-info'>
-        <h1>{roverName}</h1>
+        <h1 className='rover-name'>{roverName}</h1>
         <p className='info'>Status: {status}</p>
         <p className='info'>Sol: {sol}</p>
       </div>
