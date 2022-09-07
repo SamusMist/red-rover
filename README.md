@@ -24,26 +24,27 @@ Anyway, once you select a rover and a date you can hit that submit button and se
     - __Components__
       - __App__
         - [App.css](src/Components/App/App.css)
-        - [App.js](src/Components/App/App.tsx)
+        - [App.tsx](src/Components/App/App.tsx)
       - __Error__
         - [Error.css](src/Components/Error/Error.css)
-        - [Error.js](src/components/Error/Error.tsx)
-        - [ErrorPage.js](src/components/Error/ErrorPage.tsx)
+        - [Error.tsx](src/components/Error/Error.tsx)
+        - [ErrorPage.tsx](src/components/Error/ErrorPage.tsx)
       - __Header__
         - [Header.css](src/components/Header/Header.css)
-        - [Header.js](src/components/Header/Header.tsx)
+        - [Header.tsx](src/components/Header/Header.tsx)
       - __RoverCard__
         - [RoverCard.css](src/components/RoverCard/RoverCard.css)
-        - [RoverCard.js](src/components/RoverCard/RoverCard.tsx)
+        - [RoverCard.tsx](src/components/RoverCard/RoverCard.tsx)
       - __RoverDisplay__
         - [RoverDisplay.css](src/components/RoverDisplay/RoverDisplay.css)
-        - [RoverDisplay.js](src/components/RoverDisplay/RoverDisplay.tsx)
+        - [RoverDisplay.tsx](src/components/RoverDisplay/RoverDisplay.tsx)
       - __Rovers__
         - [Rovers.css](src/components/Rovers/Rovers.css)
-        - [Rovers.js](src/components/Rovers/Rovers.tsx)
-    - [apiCalls.js](src/apiCalls.tsx)
+        - [Rovers.tsx](src/components/Rovers/Rovers.tsx)
+    - [apiCalls.tsx](src/apiCalls.tsx)
     - [index.css](src/index.css)
-    - [index.js](src/index.tsx)
+    - [index.tsx](src/index.tsx)
+    - [utilities.tsx](src/utilities.tsx)
 
 To view the code:
 - Clone down the Repository
